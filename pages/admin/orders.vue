@@ -5,8 +5,8 @@
                 <template v-slot:default>
                     <thead>
                     <tr>
-                        <th class="text-xs-left">Поступил</th>
                         <th class="text-xs-left">Заказ</th>
+                        <th class="text-xs-left">Поступил</th>
                         <th class="text-xs-left">Клиент</th>
                         <th class="text-xs-left">Телефон</th>
                         <th class="text-xs-left">Дополнительно</th>
@@ -15,8 +15,8 @@
                     </thead>
                     <tbody>
                     <tr v-for="item in items" :key="item._id">
-                        <td>{{ item.viewed_at | date }}</td>
                         <td>{{ item.part }}</td>
+                        <td>{{ item.created_at | date }}</td>
                         <td>{{ item.name }}</td>
                         <td>{{ item.phone }}</td>
                         <td>
