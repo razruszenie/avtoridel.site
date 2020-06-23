@@ -7,13 +7,6 @@ const router = Router()
 // Admin
 // api/news/${text}
 
-
-router.put(
-    '/admin/image/:id',
-    passport.authenticate('JWT', {session: false}),
-    ctr.deleteImage
-)
-
 router.post(
     '/admin/promo',
     passport.authenticate('JWT', {session: false}),
