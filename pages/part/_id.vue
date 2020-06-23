@@ -89,7 +89,7 @@
                                             <div v-else>
                                                 <meta itemprop="price" :content="1">
                                                 <meta itemprop="priceCurrency" content="USD">
-                                                <h2>Цена не указана</h2>
+                                                <h2>Не указана</h2>
                                             </div>
                                             <link itemprop="availability" href="http://schema.org/InStock" />
                                         </td>
