@@ -172,7 +172,7 @@
                         <div class="part-order-xs">
                             <v-btn color="#ed4f4f"
                                    dark
-                                   href="tel:+375 (29) 787 11 11"
+                                   href="tel:+375 XX XXX XX XX"
                                    style="width: 120px;"
                             >Позвонить</v-btn>
                             <v-btn color="primary"
