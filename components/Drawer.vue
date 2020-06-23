@@ -82,20 +82,16 @@
                         link: "/about"
                     },
                     {
-                        title: 'Гарантии',
-                        link: "/guarantee"
-                    },
-                    {
                         title: 'Контакты',
                         link: "/contacts"
                     },
                     {
-                        title: 'Оплата и доставка',
-                        link: "/delivery"
+                        title: 'Гарантии',
+                        link: "/guarantee"
                     },
                     {
-                        title: 'Отзывы',
-                        link: "/guarantee"
+                        title: 'Оплата и доставка',
+                        link: "/delivery"
                     },
                     {
                         title: 'Войти',
