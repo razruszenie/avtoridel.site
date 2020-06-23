@@ -51,9 +51,9 @@
                     <v-list-item-title>
                         <div class="d-flex align-center">
                             <v-btn  outlined
-                                    :href="`tel:+375 29 541 30 00`"
+                                    :href="`tel:+375 XX XXX XX XX`"
                                     color="#97271d"
-                            > <v-icon left>phone</v-icon> +375 29 541 30 00</v-btn>
+                            > <v-icon left>phone</v-icon> +375 XX XXX XX XX</v-btn>
                         </div>
                     </v-list-item-title>
                 </v-list-item-content>

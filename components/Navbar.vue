@@ -24,7 +24,7 @@
             </div>
             <div class="navbar-phone">
                 <v-btn  outlined
-                        :href="`tel:+375 29 541 30 00`"
+                        :href="`tel:+375 XX XXX XX XX`"
                         color="#B71C1C"
                 > <v-icon left>phone</v-icon> +375 XX XXX XX XX</v-btn>
             </div>
