@@ -45,7 +45,7 @@
             </v-layout>
 
             <div class="footer-more">
-                <div style="text-align: left;">&copy; {{ new Date().getFullYear() }} ООО "Avtoridel"</div>
+                <div style="text-align: left;">&copy; {{ new Date().getFullYear() }} ООО "Авторидел"</div>
                 <v-spacer></v-spacer>
                 <a title="Производитель системы" target="_blank" href="https://bampart.com">Работает на базе
                     <span style="color: #be2c33">Bampart.com</span></a>

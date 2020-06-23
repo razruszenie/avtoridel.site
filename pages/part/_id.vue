@@ -51,21 +51,20 @@
                                 ></v-img>
 
                             </div>
-                            <v-layout wrap class="images-more" v-if="part.image.length > 1">
-                                <v-flex xs12 lg3
-                                        v-for="(im, index) in part.image"
-                                        :key="index"
-                                        class="part-img"
-                                        v-if="index > 0"
-                                >
+                            <div class="images-more" v-if="part.image.length > 1">
+                                <div v-for="(im, index) in part.image"
+                                     :key="index"
+                                     class="part-img"
+                                     v-if="index > 0">
                                     <v-img :src="im"
                                            @click="galeryShow(part.image, index)"
-                                           aspect-ratio="1"
-                                           :eager="true"
-                                           style="cursor: pointer"
+                                            aspect-ratio="1"
+                                            :eager="true"
+                                            class="grey lighten-2"
+                                            style="cursor: pointer"
                                     ></v-img>
-                                </v-flex>
-                            </v-layout>
+                                </div>
+                            </div>
                             <div class="bampart-dot">
                                 <div v-for="index in part.image"
                                      class="bampart-image-dot"
@@ -412,6 +411,7 @@
                         display: flex;
 
                         .part-img {
+                            width: 120px;
                             height: 120px;
                             margin-right: 10px;
                         }
