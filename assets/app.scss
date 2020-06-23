@@ -1,0 +1,129 @@
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.v-card__title {
+  word-break: initial !important;
+}
+
+.body-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+
+  .bampart-input-pd{
+    padding: 10px 10px 0;
+  }
+
+  #filter{
+    position: sticky;
+    z-index: 1;
+    height: 100%;
+  }
+
+  .special{
+    position: absolute;
+    z-index: 1;
+
+    .special-btn{
+      -webkit-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      -webkit-animation: swing 2s ease infinite;
+      animation: swing 2s ease infinite;
+      margin-top: -10px;
+      margin-left: -5px;
+    }
+  }
+
+  @keyframes swing {
+    15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+    }
+    30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+    }
+    40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (min-width: 1301px)
+{
+
+  .body-container {
+    margin-top: 10px;
+
+    .help{
+      color: black;
+      background-color: #f6af42;
+      margin-top: 50px;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .b-c-admin{
+    height: 100%;
+    width: 100%;
+
+    th {
+      top: 60px;
+    }
+
+  }
+}
+
+@media screen and (min-width: 1264px) {
+  #filter {
+    top: 80px;
+  }
+
+  .ft-id{
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 959px)
+{
+  .gh23c-title{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1263px)
+{
+  .help{
+    margin-top: 12px;
+    color: black;
+    background-color: #f6af42;
+  }
+
+  .img-xs-n{
+    display: none;
+  }
+
+  .ft-id{
+    font-size: 20px;
+  }
+
+}
