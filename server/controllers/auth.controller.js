@@ -26,22 +26,22 @@ module.exports.login = async (req, res) => {
     }
 }
 
-module.exports.createOne = async (req, res) => {
-
-    const salt = bcrypt.genSaltSync(10)
-    const user = new User({
-        login: 'avtoridel',
-        password: bcrypt.hashSync('9m0H4Tbt', salt)
-    })
-
-    try {
-        await user.save()
-        res.status(201).json({"message": "Client created"})
-    } catch (e) {
-
-        res.status(500).json(e)
-    }
-}
+// module.exports.createOne = async (req, res) => {
+//
+//     const salt = bcrypt.genSaltSync(10)
+//     const user = new User({
+//         login: 'avtoridel',
+//         password: bcrypt.hashSync('9m0H4Tbt', salt)
+//     })
+//
+//     try {
+//         await user.save()
+//         res.status(201).json({"message": "Client created"})
+//     } catch (e) {
+//
+//         res.status(500).json(e)
+//     }
+// }
 
 module.exports.getAll = async (req, res) => {
     try {

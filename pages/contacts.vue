@@ -28,8 +28,10 @@
                         <div>
                             <div class="contacts-container">
                                 <ul>
-                                    <li>
-                                        <strong>г. Минск, ул. Танковая, 10/1</strong>
+                                    <li class="mb-3">
+                                        <strong>
+                                            <span style="display: block">Колодищи, Минский район,</span>
+                                            ул. Танковая, 10/1</strong>
                                     </li>
                                     <li class="mt-1">
                                         <span class="contacts-text-min">Телефоны:

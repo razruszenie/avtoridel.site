@@ -28,9 +28,7 @@
                     <div class="drawer-work">
                         <v-icon large>alarm</v-icon>
                         <div class="drawer-work-time">
-                            <span>ПН-ПТ: с 9.00 до 18.00</span>
-                            <span>СБ: с 9.00 до 16.00</span>
-                            <span>ВС: выходной</span>
+                            <span>ПН-ВС: с 10.00 до 20.00</span>
                         </div>
                     </div>
                 </v-list-item-content>
@@ -41,9 +39,9 @@
                     <v-list-item-title>
                         <div class="d-flex align-center">
                             <v-btn  outlined
-                                    :href="`tel:+375 XX XXX XX XX`"
+                                    :href="`tel:+375 25 96 88 915`"
                                     color="#97271d"
-                            > <v-icon left>phone</v-icon> +375 XX XXX XX XX</v-btn>
+                            > <v-icon left>phone</v-icon> +375 25 96 88 915</v-btn>
                         </div>
                     </v-list-item-title>
                 </v-list-item-content>

@@ -28,7 +28,7 @@
                         <div class="footer-title">КОНТАКТЫ</div>
                         <div class="footer-info-text"
                              itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <p itemprop="addressLocality">г. Минск</p>
+                            <p itemprop="addressLocality">Колодищи, Минский район</p>
                             <p itemprop="streetAddress">ул. Танковая, 10/1</p>
                         </div>
                         <div class="footer-info-text">
@@ -66,7 +66,7 @@
                     },
                     {
                         title: 'Гарантии',
-                        link: "/contacts"
+                        link: "/guarantee"
                     },
                     {
                         title: 'Контакты',

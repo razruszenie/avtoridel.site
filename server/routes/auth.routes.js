@@ -6,10 +6,10 @@ const router = Router()
 // api/auth/admin/login
 router.post('/admin/login', ctr.login)
 
-router.get(
-    '/admin/one',
-    ctr.createOne
-)
+// router.get(
+//     '/admin/one',
+//     ctr.createOne
+// )
 
 router.get(
     '/admin/all',

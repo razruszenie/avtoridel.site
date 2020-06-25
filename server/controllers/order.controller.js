@@ -74,13 +74,13 @@ module.exports.create = async (req, res) => {
             + req.body.part + '. Имя: ' + req.body.name + ', телефон: ' +
             req.body.prefix + req.body.phone + ', дополнительно: ' + more)
 
-        // axios.get('https://alarmerbot.ru/?key=581274-ce55ff-6780d4&message=' + msg)
-        //     .then(response => {
-        //
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     });
+        axios.get('https://alarmerbot.ru/?key=37752f-f13a0c-48e6ec&message=' + msg)
+            .then(response => {
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
         res.status(201).json(order)
     } catch (e) {
