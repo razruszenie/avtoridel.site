@@ -10,7 +10,7 @@
                     <v-flex xs12 lg8 class="contacts-map">
                         <client-only>
                             <div id="map">
-                                <yandex-map :coords="coords" zoom="14">
+                                <yandex-map :coords="coordsMap" zoom="11">
                                     <ymap-marker
                                             :coords="coords"
                                             marker-id="123"
@@ -29,15 +29,19 @@
                             <div class="contacts-container">
                                 <ul>
                                     <li>
-                                        <strong>г. Минск пр-т Победителей 65</strong>
+                                        <strong>г. Минск, ул. Танковая, 10/1</strong>
                                     </li>
                                     <li class="mt-1">
-                                        <span class="contacts-text-min">Телефон:
-                                            <span class="contacts-black">+375 XX XX XX XX</span>
+                                        <span class="contacts-text-min">Телефоны:
+                                            <a :href="`tel:+375 25 96 88 915`" class="contacts-black">+375 25 96 88 915</a>
+                                            <a :href="`tel:+375 33 35 78 742`" class="contacts-black contacts-ridel">+375 33 35 78 742</a>
+                                            <a :href="`tel:+375 29 59 31 803`" class="contacts-black contacts-ridel">+375 29 59 31 803</a>
+                                            <a :href="`tel:+375 29 51 35 172`" class="contacts-black contacts-ridel">+375 29 51 35 172</a>
+                                            <a :href="`tel:+375 29 15 07 467`" class="contacts-black contacts-ridel">+375 29 15 07 467</a>
                                         </span>
                                     </li>
                                     <li>
-                                        <span class="contacts-text-min">Эл. почта: <a href="mailto:">info@site.com</a></span>
+                                        <span class="contacts-text-min">Эл. почта: <a href="mailto:">avtoridel@mail.ru</a></span>
                                     </li>
                                 </ul>
                             </div>
@@ -45,42 +49,32 @@
                                 <strong>Рабочее время:</strong>
                                 <ul>
                                     <li class="mt-1">
-                                        <span class="contacts-text-min">Будние дни:
-                                            <span class="contacts-black">09:00 - 18:00</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="contacts-text-min">Суббота:
-                                            <span class="contacts-black">09:00 - 16:00</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="contacts-text-min">Воскресенье:
-                                            <span class="contacts-black">выходной</span>
+                                        <span class="contacts-text-min">Каждый день:
+                                            <span class="contacts-black">10:00 - 20:00</span>
                                         </span>
                                     </li>
                                 </ul>
                             </div>
-                            <div>
-                                <strong>ООО "Фирма"</strong>
-                                <ul>
-                                    <li class="mt-1">
-                                        <span class="contacts-text-min">Рег. номер:
-                                            <span class="contacts-black">XXXXXXXXXXXXXX</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="contacts-text-min">НДС номер:
-                                            <span class="contacts-black">XXXXXXXXXXXXXX</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="contacts-text-min">УНП:
-                                            <span class="contacts-black">XXXXXXXXXXXXXX</span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <!--<div>-->
+                                <!--<strong>ООО "Фирма"</strong>-->
+                                <!--<ul>-->
+                                    <!--<li class="mt-1">-->
+                                        <!--<span class="contacts-text-min">Рег. номер:-->
+                                            <!--<span class="contacts-black">XXXXXXXXXXXXXX</span>-->
+                                        <!--</span>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<span class="contacts-text-min">НДС номер:-->
+                                            <!--<span class="contacts-black">XXXXXXXXXXXXXX</span>-->
+                                        <!--</span>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<span class="contacts-text-min">УНП:-->
+                                            <!--<span class="contacts-black">XXXXXXXXXXXXXX</span>-->
+                                        <!--</span>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
                         </div>
                     </v-flex>
                 </v-layout>
@@ -100,7 +94,8 @@
 
         data () {
             return {
-                coords: [53.838977, 27.448722]
+                coordsMap: [53.903442, 27.546482],
+                coords: [53.913442, 27.746482]
             }
         },
 
@@ -114,6 +109,11 @@
 
     .contacts-black{
         color: black;
+    }
+
+    .contacts-ridel{
+        display: block;
+        margin-left: 86px;
     }
 
     ul{

@@ -6,30 +6,16 @@
                     class="headline white--text"
             >О нас</v-card-title>
             <v-card-text class="pt-4 black--text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam aut beatae consequatur.</p>
-                <p>A aperiam aut beatae consequatur, delectus eos error esse minima nostrum omnis.</p>
-                <p>praesentium quibusdam recusandae rem sed sit sunt suscipit ullam voluptate:</p>
+                <p>Наша компания занимается продажей оригинальных Б/У двигателей и других автозапчастей оптом и в розницу.</p>
+                <p>Все запчасти контрактные - официально привезены из Европы (Франция, Бельгия) и
+                    растаможены. На все двигатели Б/У мы предоставляем гарантию 30 дней. Мы доставляем
+                    автозапчасти по всей Беларуси. На наших складах в Минске представлен широкий ассортимент
+                    двигателей для разных автомобилей.Также привозим двигатели и другие запчасти ПОД ЗАКАЗ.</p>
                 <ul>
-                    <li>Proin vitae lorem et nisl varius sollicitudin.</li>
-                    <li>Mauris vitae ex at erat ornare tincidunt ut eget est.</li>
-                    <li>Duis non mi sed nisl pharetra ullamcorper at eu est.</li>
-                    <li>Suspendisse vehicula risus eget quam vulputate hendrerit.</li>
-                    <li>Sed tincidunt libero in magna rhoncus, quis auctor sem rutrum.</li>
-                    <li>Aenean sed urna pretium, consectetur libero vel, commodo dolor.</li>
+                    <li>Также имеется своя точка на авторынке.</li>
+                    <li>Мы дорожим нашей репутацией и заботимся о наших клиентах.</li>
+                    <li>Постоянным клиентам скидки до 10%, специальные условия оптовым покупателям.</li>
                 </ul>
-                <p class="mt-3">Pellentesque a felis a sem elementum ullamcorper id sit amet dui. Fusce at eros eros
-                    Ut ac elit tempus, venenatis urna vitae.</p>
-                <p>Donec convallis blandit erat. In tincidunt magna quis mauris sagittis, sit amet placerat ante pretium.
-                    Praesent placerat ultricies convallis. Sed et fermentum lectus. Suspendisse potenti.</p>
-                <p>Nam tempus erat sapien, at sagittis est ullamcorper non. In hac habitasse platea dictumst. Praesent
-                    a nibh congue, fringilla elit faucibus, dictum velit. Nulla nec dui velit. Fusce non magna et
-                    est porttitor aliquam.</p>
-                <p>Morbi quam tellus, cursus ac porta eu, cursus iaculis velit. Cras blandit diam eu sem malesuada
-                    porttitor. Fusce consequat ultrices ipsum, a pretium nulla elementum nec. Ut sed nulla
-                    feugiat, varius nibh in, laoreet ex. Sed blandit tellus efficitur nunc mollis aliquam.
-                    Donec lobortis felis eu sollicitudin gravida.</p>
-                <p>Nam ex lectus, suscipit eu ligula sed, volutpat condimentum arcu. Donec dignissim aliquet lectus,
-                    eu cursus nisl dignissim u!</p>
             </v-card-text>
         </v-card>
     </div>

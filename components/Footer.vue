@@ -9,8 +9,9 @@
             <v-layout wrap>
                 <v-flex xs12 lg4 class="footer-content">
                     <img height="60px" src="/logo.png">
-                    <p class="footer-desc">О компании. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Alias asperiores aspernatur expedita porro provident repellendus</p>
+                    <p class="footer-desc">О компании. Продажа оригинальных Б/У автозапчастей оптом и в розницу.
+                        На наших складах в Минске представлен широкий ассортимент для разных автомобилей.
+                        Доставка по всей Беларуси</p>
                 </v-flex>
                 <v-flex xs12 lg4 class="footer-content">
                     <div class="footer-link">
@@ -20,7 +21,6 @@
                                    no-prefetch
                                    :to="item.link"
                         >{{ item.title }}</nuxt-link>
-                        <a href="/politika-konfidencialnosti.pdf" target="_blank">Конфиденциальность</a>
                     </div>
                 </v-flex>
                 <v-flex xs12 lg4 class="footer-content">
@@ -29,23 +29,22 @@
                         <div class="footer-info-text"
                              itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                             <p itemprop="addressLocality">г. Минск</p>
-                            <p itemprop="streetAddress">пр-т Победителей 65</p>
+                            <p itemprop="streetAddress">ул. Танковая, 10/1</p>
                         </div>
                         <div class="footer-info-text">
-                            <p style="font-weight: bold">+375 XX XX XX XX</p>
-                            <p style="font-weight: bold">+375 XX XX XX XX</p>
+                            <p style="font-weight: bold">+375 25 96 88 915</p>
+                            <p style="font-weight: bold">+375 33 35 78 742</p>
                         </div>
                         <div class="footer-info-text">
-                            <p>ПН-ПТ: с 9.00 до 18.00</p>
-                            <p>СБ: с 9.00 до 16.00</p>
-                            <p>ВС: выходной</p>
+                            <p>Время работы:</p>
+                            <p class="font-weight-medium">ПН-ВС: с 10.00 до 20.00</p>
                         </div>
                     </div>
                 </v-flex>
             </v-layout>
 
             <div class="footer-more">
-                <div>&copy; {{ new Date().getFullYear() }} ООО "Avtoridel"</div>
+                <div>&copy; {{ new Date().getFullYear() }} Avtoridel</div>
             </div>
         </div>
     </v-footer>
@@ -115,6 +114,7 @@
         }
 
         .footer-info-text {
+            margin-top: 10px;
 
             p {
                 margin-bottom: 5px;

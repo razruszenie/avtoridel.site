@@ -17,16 +17,14 @@
             <div class="navbar-work">
                 <v-icon large>alarm</v-icon>
                 <div class="navbar-work-time">
-                    <span>ПН-ПТ: с 9.00 до 18.00</span>
-                    <span>СБ: с 9.00 до 16.00</span>
-                    <span>ВС: выходной</span>
+                    <span>ПН-ВС: с 10.00 до 20.00</span>
                 </div>
             </div>
             <div class="navbar-phone">
                 <v-btn  outlined
-                        :href="`tel:+375 XX XXX XX XX`"
+                        :href="`tel:+375 25 96 88 915`"
                         color="#B71C1C"
-                > <v-icon left>phone</v-icon> +375 XX XXX XX XX</v-btn>
+                > <v-icon left>phone</v-icon> +375 25 96 88 915</v-btn>
             </div>
 
             <v-toolbar-items class="navbar-btns">
@@ -42,16 +40,6 @@
 </template>
 <script>
     export default {
-
-        data () {
-            return {
-                g_link: 'https://bamper.by/seller/3722/#scroll',
-                items: [
-                    { title: '4авто', link: '/admin/login' },
-                    { title: 'Bampart.com', link: 'bampart' }
-                ]
-            }
-        },
 
         methods: {
             showDrawer(){

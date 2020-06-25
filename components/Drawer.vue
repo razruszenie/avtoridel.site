@@ -17,16 +17,6 @@
                     v-for="(item,i) in items"
                     :key="i"
                     :to="item.link"
-                    v-if="item.title !== 'Отзывы'"
-            >
-                <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item-content>
-            </v-list-item>
-
-            <v-list-item
-                    v-else
-                    target="_blank" :href="g_link"
             >
                 <v-list-item-content>
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -71,10 +61,9 @@
 
         data () {
             return {
-                g_link: 'https://bamper.by/seller/3722/#scroll',
                 items: [
                     {
-                        title: 'Главная',
+                        title: 'Каталог',
                         link: "/"
                     },
                     {
