@@ -1,6 +1,7 @@
 const Order = require('../models/order.model')
 const Pagination = require('../middleware/pagination')
 const axios = require('axios');
+const fs = require('fs')
 
 //Admin
 module.exports.getAll = async (req, res) => {
@@ -85,6 +86,35 @@ module.exports.create = async (req, res) => {
         res.status(201).json(order)
     } catch (e) {
 
+        res.status(500).json(e)
+    }
+}
+
+module.exports.getSitemap = async (req, res) => {
+    try {
+
+        const data = await axios.get('https://bampart.com/api/site/sitemap?token=e9205276-6370-42b7-8424-d31c4bb6a4cf');
+        const xmlIndex = data.data;
+
+        for(let link of xmlIndex.links){
+            console.log(link)
+            const xml = await axios.get(link.loc);
+
+            const newLink = link.loc.split('https://bampart.com/')[1]
+
+            fs.writeFile('static/' + newLink, xml.data, 'utf8', function (err) {
+                if (err) {
+                    console.log('Error save ' + newLink);
+                }
+            });
+        }
+
+
+        let newXml = xmlIndex.xml.split('https://bampart.com/').join('https://avtoridel.by/')
+        res.send(newXml)
+
+
+    } catch (e) {
         res.status(500).json(e)
     }
 }

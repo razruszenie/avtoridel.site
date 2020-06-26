@@ -84,7 +84,7 @@
                         <v-btn color="#B71C1C"
                                dark
                                outlined
-                               href="tel:+375 (29) 541 30 00"
+                               href="tel:+375 25 96 88 915"
                                style="width: 120px"
                         >Позвонить</v-btn>
                         <v-btn color="primary"

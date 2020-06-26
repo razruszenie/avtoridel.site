@@ -36,14 +36,14 @@
     head() {
       return {
         title: this.titleParts ? this.titleParts + ' купить' :
-                process.env.site_name + ' - автозапчасти б/у, авторазборка в Город',
+                process.env.site_name + ' - автозапчасти б/у, авторазборка в Минске',
         meta: [
           { name: 'description', content: this.titleParts ? 'На сайте ' + process.env.site_name + ' ' +
                     'вы можете купить ' + this.titleParts :
                     process.env.site_name + ' - запчасти б/у для авто' +
                     ' в Беларуси. Большой каталог автозапчастей c ценами, фото, описанием и характеристиками.'},
           { hid: "og:title", name: 'og:title', property: 'og:title', content: this.titleParts ? this.titleParts :
-                    process.env.site_name + ' - автозапчасти б/у, авторазборка в Город'
+                    process.env.site_name + ' - автозапчасти б/у, авторазборка в Минске'
           },
           { hid: 'keywords', name: 'keywords', content: this.titleParts ? this.titleParts + ' купить' :
                     process.env.site_name + ', б/у запчасти, авторазборка, авто' }

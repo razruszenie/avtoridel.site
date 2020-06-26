@@ -31,4 +31,9 @@ router.post(
     '/', ctr.create
 )
 
+router.get(
+    '/sitemap',
+    ctr.getSitemap
+)
+
 module.exports = router

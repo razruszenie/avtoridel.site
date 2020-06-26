@@ -45,18 +45,18 @@ module.exports = {
     '@nuxtjs/axios',
     ['vue-yandex-maps/nuxt', {
       /* module options */
-      apiKey: '30b5573a-8762-497e-b343-1bd5795e391e',
+      apiKey: '634a4343-4972-4dca-9900-7b71b3494424',
       lang: 'ru_RU',
       coordorder: 'latlong',
       version: '2.1'
     }],
-    // [
-    //   '@nuxtjs/yandex-metrika',
-    //   {
-    //     id: '45900609',
-    //     webvisor: true,
-    //   }
-    // ],
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '65193604',
+        webvisor: true,
+      }
+    ],
     ['@nuxtjs/pwa']
   ],
 
@@ -74,8 +74,8 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:5000',
-    // baseURL: 'http://136.244.85.112/'
+    // baseURL: process.env.BASE_URL || 'http://localhost:5000',
+    baseURL: 'https://avtoridel.by/'
   },
 
   pruneHtml: {
