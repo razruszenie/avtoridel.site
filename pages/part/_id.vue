@@ -83,7 +83,11 @@
                                             <div v-if="part.price !== 0">
                                                 <meta itemprop="price" :content="part.price">
                                                 <meta itemprop="priceCurrency" :content="part.currency">
-                                                <h2 style="color: #44bb6e;">{{ part.price }} {{ part.currency }}</h2>
+                                                <h2 style="color: #44bb6e;" v-if="part.discount === 0">{{ part.price }} {{ part.currency }}</h2>
+                                                <span v-else>
+                                <h3 style="text-decoration: line-through; color: darkgray">{{ part.price }} {{ part.currency }}</h3>
+                                <h2 style="color: #44bb6e;">{{ part.price - (part.discount / 100 *  part.price) }} {{ part.currency }}</h2>
+                            </span>
                                             </div>
                                             <div v-else>
                                                 <meta itemprop="price" :content="1">
@@ -240,6 +244,23 @@
                     params: {article: params.id},
                     headers: { 'token': process.env.site_token }
                 })
+
+                for(let arPart of res){
+
+                    if(arPart.image.length !== 0){
+                        const arArticle = parseInt(arPart.article.split('6_')[1]);
+
+                        if(arArticle < 7226){
+                            for (let [index, apImage] of arPart.image.entries()) {
+                                if(apImage.includes('bamper')){
+                                    arPart.image.splice(index, 1)
+                                }
+                            }
+                        }
+
+                    }
+                }
+
                 const one_part = res[0];
 
                 if(res.length >= 1){

@@ -11,7 +11,7 @@ export const state = () => ({
 export const mutations = {
     setParts(state, res) {
 
-        state.parts = res.docs;
+        state.parts = [];
         state.page = res.page;
         state.totalPages = res.totalPages;
         state.totalParts = res.totalDocs;
@@ -33,6 +33,24 @@ export const mutations = {
             }
             else{
                 title = "Б/у автозапчасти" + make + model + generation
+            }
+
+            for(let arPart of res.docs){
+
+                if(arPart.image.length !== 0){
+                    const arArticle = parseInt(arPart.article.split('6_')[1]);
+
+                    if(arArticle < 7226){
+                        for (let [index, apImage] of arPart.image.entries()) {
+                            if(apImage.includes('bamper')){
+                                arPart.image.splice(index, 1)
+                            }
+                        }
+                    }
+
+                }
+
+                state.parts.push(arPart)
             }
         }
 

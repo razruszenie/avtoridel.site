@@ -29,7 +29,7 @@
                         <div class="footer-info-text"
                              itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                             <p itemprop="addressLocality">Колодищи, Минский район</p>
-                            <p itemprop="streetAddress">ул. Танковая, 10/1</p>
+                            <p itemprop="streetAddress">ул. Танковая, 10</p>
                         </div>
                         <div class="footer-info-text">
                             <p style="font-weight: bold">+375 25 96 88 915</p>
