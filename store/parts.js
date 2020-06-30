@@ -37,18 +37,18 @@ export const mutations = {
 
             for(let arPart of res.docs){
 
-                if(arPart.image.length !== 0){
-                    const arArticle = parseInt(arPart.article.split('6_')[1]);
+                let images = [];
 
-                    if(arArticle < 7226){
-                        for (let [index, apImage] of arPart.image.entries()) {
-                            if(apImage.includes('bamper')){
-                                arPart.image.splice(index, 1)
-                            }
+                if(arPart.image.length !== 0){
+
+                    for (let apImage of arPart.image) {
+                        if(!apImage.includes('bamper')){
+                            images.push(apImage)
                         }
                     }
-
                 }
+
+                arPart.image = images;
 
                 state.parts.push(arPart)
             }

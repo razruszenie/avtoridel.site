@@ -2,7 +2,7 @@
     <div class="b-c-admin">
         <v-card>
             <v-card-title>
-                <span class="headline">Проомо-акции</span>
+                <span class="headline">Проомо</span>
             </v-card-title>
             <v-card-text>
                 <v-form
@@ -59,6 +59,60 @@
                 </v-layout>
             </v-card-text>
         </v-card>
+        <v-card class="mt-4">
+            <v-card-title class="pb-0">
+                <span class="headline">Курсы валют</span>
+            </v-card-title>
+            <v-card-text>
+                <v-form
+                        ref="formCur"
+                        v-model="validCur"
+                        onSubmit="return false;"
+                        lazy-validation
+                >
+                    <v-layout wrap
+                              style="margin: 0 -6px 0 -6px">
+                        <v-flex xs12 md6 lg4>
+                            <v-layout wrap class="pa-2">
+                                <v-flex xs12>
+                                    <v-text-field
+                                            v-model="USD"
+                                            :rules="currencyRules"
+                                            label="USD"
+                                            required
+                                    ></v-text-field>
+                                    <v-text-field
+                                            v-model="EUR"
+                                            :rules="currencyRules"
+                                            label="EUR"
+                                            required
+                                    ></v-text-field>
+                                    <v-text-field
+                                            v-model="RUB"
+                                            :rules="currencyRules"
+                                            label="RUB"
+                                            required
+                                    ></v-text-field>
+                                    <v-text-field
+                                            v-model="BYN"
+                                            :rules="currencyRules"
+                                            label="BYN"
+                                            required
+                                    ></v-text-field>
+                                </v-flex>
+                            </v-layout>
+                        </v-flex>
+                        <v-flex xs12>
+                            <v-btn color="primary"
+                                   :dark="!disableCur"
+                                   :disabled="disableCur"
+                                   @click="validateCur()"
+                            >Обновить</v-btn>
+                        </v-flex>
+                    </v-layout>
+                </v-form>
+            </v-card-text>
+        </v-card>
     </div>
 </template>
 
@@ -75,10 +129,17 @@
 
         async asyncData({$axios}) {
 
-            const res = await $axios.$get('api/news/promo');
+            try {
+                const res = await $axios.$get('api/news/promo');
+                const resCur = await $axios.$get('api/currency');
 
-            return {
-                promos: res
+
+                return {
+                    promos: res, USD: resCur.USD || 1, EUR: resCur.EUR || 1, BYN: resCur.BYN || 1, RUB: resCur.RUB || 1, id: resCur._id
+                }
+            }
+            catch (e) {
+                console.log(e)
             }
         },
 
@@ -90,7 +151,15 @@
                 files: [],
                 imageRules: [
                     value => !value || value.size < 10000000 || 'Выберите изображение(не больше 10 mb)',
-                ]
+                ],
+
+
+                validCur: true,
+                disableCur: false,
+                currencyRules: [
+                    v => (v.toString().length <= 10) || 'Курс не может быть больше 10 символов',
+                    v => (v && v >= 0) || 'Курс не может быть меньше 0',
+                ],
             }
         },
 
@@ -168,6 +237,36 @@
 
                     }
 
+                }
+            },
+
+            async updateCurrency() {
+
+                const formData = {
+                    USD: this.USD,
+                    EUR: this.EUR,
+                    BYN: this.BYN,
+                    RUB: this.RUB,
+                }
+
+                try {
+                    await this.$axios.$put('api/currency/admin/' + this.id, formData);
+
+                    this.$store.dispatch('snackbar/show', `Успешно обновлено`);
+
+                } catch (e) {
+                    this.$store.dispatch('snackbar/show', `Не удалось обновить`);
+                    console.log(e)
+                } finally {
+                    this.disableCur = false;
+                }
+
+            },
+
+            async validateCur() {
+                if (this.$refs.formCur.validate()) {
+                    this.disableCur = true;
+                    await this.updateCurrency()
                 }
             },
         }

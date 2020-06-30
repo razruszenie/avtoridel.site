@@ -68,7 +68,7 @@
             return {
                 drawer: true,
                 items: [
-                    { title: 'Промо', icon: 'web', link: '/admin/promo' },
+                    { title: 'Настройки', icon: 'web', link: '/admin/promo' },
                     { title: 'Заявки', icon: 'dashboard', link: '/admin/orders' },
                     { title: 'Выйти', icon: 'lock_open', link: '/admin/logout' }
                 ]

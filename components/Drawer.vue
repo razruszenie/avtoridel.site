@@ -34,22 +34,21 @@
                 </v-list-item-content>
             </v-list-item>
 
-            <v-list-item>
+            <v-list-item  v-for="phone in phones"
+                          :key="phone.number">
                 <v-list-item-content>
                     <v-list-item-title>
                         <div class="d-flex align-center">
                             <v-btn  outlined
-                                    :href="`tel:+375 25 96 88 915`"
+                                    :href="`tel:+` + phone.number"
                                     color="#97271d"
-                            > <v-icon left>phone</v-icon> +375 25 96 88 915</v-btn>
+                            > <v-icon left>phone</v-icon> +{{ phone.number }}</v-btn>
                         </div>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
 
         </v-list>
-
-
     </v-navigation-drawer>
     </div>
 </template>
@@ -59,6 +58,23 @@
 
         data () {
             return {
+                phones: [
+                    {
+                        number: '375 25 96 88 915'
+                    },
+                    {
+                        number: '375 33 35 78 742'
+                    },
+                    {
+                        number: '375 29 59 31 803'
+                    },
+                    {
+                        number: '375 29 51 35 172'
+                    },
+                    {
+                        number: '375 29 15 07 467'
+                    },
+                ],
                 items: [
                     {
                         title: 'Каталог',

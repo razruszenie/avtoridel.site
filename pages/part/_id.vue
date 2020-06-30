@@ -88,6 +88,12 @@
                                 <h3 style="text-decoration: line-through; color: darkgray">{{ part.price }} {{ part.currency }}</h3>
                                 <h2 style="color: #44bb6e;">{{ part.price - (part.discount / 100 *  part.price) }} {{ part.currency }}</h2>
                             </span>
+
+                                                <div class="mt-1 d-flex flex-column">
+                                                    <span v-for="(value, name) in cur"
+                                                          v-if="name !== part.currency"
+                                                          class="other-price">~{{ parseInt(part.l_price * value)}} {{ name }}</span>
+                                                </div>
                                             </div>
                                             <div v-else>
                                                 <meta itemprop="price" :content="1">
@@ -247,18 +253,19 @@
 
                 for(let arPart of res){
 
-                    if(arPart.image.length !== 0){
-                        const arArticle = parseInt(arPart.article.split('6_')[1]);
+                    let images = [];
 
-                        if(arArticle < 7226){
-                            for (let [index, apImage] of arPart.image.entries()) {
-                                if(apImage.includes('bamper')){
-                                    arPart.image.splice(index, 1)
-                                }
+                    if(arPart.image.length !== 0){
+
+                        for (let apImage of arPart.image) {
+                            if(!apImage.includes('bamper')){
+                                images.push(apImage)
                             }
                         }
 
                     }
+
+                    arPart.image = images;
                 }
 
                 const one_part = res[0];
@@ -310,7 +317,11 @@
                     }
                 ];
 
-                return {part: one_part, title: title, desc: desc, parts: res, breadcrumbs: breadcrumbs}
+                let resCur = await $axios.$get('api/currency');
+                delete resCur['_id']
+                delete resCur['__v']
+
+                return {part: one_part, title: title, desc: desc, parts: res, breadcrumbs: breadcrumbs, cur: resCur}
             }
             catch (e) {
                 console.log(e)
@@ -381,6 +392,12 @@
     .site-part-info{
         font-weight: 500;
         color: black;
+    }
+
+    .other-price{
+        font-size: 14px;
+        font-weight: 500;
+        color: gray;
     }
 
     @media screen and (min-width: 1301px) {

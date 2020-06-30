@@ -7,13 +7,13 @@
     >
         <div class="footer-container">
             <v-layout wrap>
-                <v-flex xs12 lg4 class="footer-content">
+                <v-flex xs12 lg6 class="footer-content">
                     <img height="60px" src="/logo.png">
                     <p class="footer-desc">О компании. Продажа оригинальных Б/У автозапчастей оптом и в розницу.
                         На наших складах в Минске представлен широкий ассортимент для разных автомобилей.
                         Доставка по всей Беларуси</p>
                 </v-flex>
-                <v-flex xs12 lg4 class="footer-content">
+                <v-flex xs12 lg6 class="footer-content">
                     <div class="footer-link">
                         <div class="footer-title">НАВИГАЦИЯ</div>
                         <nuxt-link v-for="(item,i) in items"
@@ -21,24 +21,6 @@
                                    no-prefetch
                                    :to="item.link"
                         >{{ item.title }}</nuxt-link>
-                    </div>
-                </v-flex>
-                <v-flex xs12 lg4 class="footer-content">
-                    <div class="footer-info">
-                        <div class="footer-title">КОНТАКТЫ</div>
-                        <div class="footer-info-text"
-                             itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <p itemprop="addressLocality">Колодищи, Минский район</p>
-                            <p itemprop="streetAddress">ул. Танковая, 10</p>
-                        </div>
-                        <div class="footer-info-text">
-                            <p style="font-weight: bold">+375 25 96 88 915</p>
-                            <p style="font-weight: bold">+375 33 35 78 742</p>
-                        </div>
-                        <div class="footer-info-text">
-                            <p>Время работы:</p>
-                            <p class="font-weight-medium">ПН-ВС: с 10.00 до 20.00</p>
-                        </div>
                     </div>
                 </v-flex>
             </v-layout>
@@ -156,10 +138,6 @@
                     display: flex;
                     align-items: center;
                     flex-direction: column;
-                }
-
-                .footer-content:first-child {
-                    align-items: flex-start;
                 }
 
                 .footer-desc {

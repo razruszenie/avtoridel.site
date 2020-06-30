@@ -27,20 +27,32 @@ module.exports.login = async (req, res) => {
 }
 
 // module.exports.createOne = async (req, res) => {
-//
-//     const salt = bcrypt.genSaltSync(10)
-//     const user = new User({
-//         login: 'avtoridel',
-//         password: bcrypt.hashSync('9m0H4Tbt', salt)
-//     })
-//
-//     try {
-//         await user.save()
-//         res.status(201).json({"message": "Client created"})
-//     } catch (e) {
-//
-//         res.status(500).json(e)
-//     }
+
+    // const Currency = require('../models/currency.model')
+    //
+    // const salt = bcrypt.genSaltSync(10)
+    // const user = new User({
+    //     login: 'avtoridel',
+    //     password: bcrypt.hashSync('9m0H4Tbt', salt)
+    // })
+
+    // const cur = {
+    //     USD: 1,
+    //     EUR: 1,
+    //     BYN: 1,
+    //     RUB: 1
+    // }
+    //
+    // const currency = new Currency(cur)
+    //
+    // try {
+    //     // await user.save()
+    //     await currency.save()
+    //     res.status(201).json({"message": "Client created"})
+    // } catch (e) {
+    //
+    //     res.status(500).json(e)
+    // }
 // }
 
 module.exports.getAll = async (req, res) => {

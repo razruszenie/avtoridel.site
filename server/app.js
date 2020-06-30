@@ -7,6 +7,7 @@ const passportStrategy = require('./middleware/passport-strategy')
 const authRoutes = require('./routes/auth.routes')
 const newsRoutes = require('./routes/news.routes')
 const orderRoutes = require('./routes/order.routes')
+const currencyRoutes = require('./routes/currency.routes')
 
 const keys = require('./keys')
 const app = express()
@@ -23,6 +24,7 @@ app.use(bodyParser.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/api/news', newsRoutes)
-app.use('/api/order', orderRoutes)
+app.use('/api/order',orderRoutes)
+app.use('/api/currency', currencyRoutes)
 
 module.exports = app
